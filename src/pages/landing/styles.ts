@@ -12,27 +12,15 @@ export const SearchForm = styled.form`
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: var(--landingColor);
-`;
 
-export const SearchTitle = styled.h1`
-  display: flex;
-  flex-direction: column;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-size: 1.8rem;
-  padding: 4rem 0;
-
-  span {
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 2rem;
-    color: #ffeaa4;
+  #main-titles {
+    padding: 4rem 0;
   }
 `;
 
 export const TextInput = styled.input`
   border: 1px solid rgba(255, 255, 255, 0.24);
-  background: #744fef;
+  background: #7f5cf1;
   border-radius: 4px;
   color: #fff;
   width: 100%;
@@ -51,8 +39,8 @@ export const Occupancy = styled.label`
   font-weight: 400;
 
   label {
-    border: 1px solid rgba(255, 255, 255, 0.24);
-    background: #744fef;
+    border: 1px solid #6f49ed;
+    background: #6f49ed;
     border-radius: 4px;
     padding: 1rem;
     text-transform: uppercase;
@@ -64,6 +52,10 @@ export const Occupancy = styled.label`
     span {
       margin-left: 0.4rem;
     }
+  }
+  .OccupancyChecked {
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    background: #7f5cf1;
   }
 `;
 

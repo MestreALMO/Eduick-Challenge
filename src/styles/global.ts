@@ -15,6 +15,8 @@ export const GlobalStyle = createGlobalStyle`
     body {
         margin: 0 auto;
         min-width: 320px;
+        background: #200E64;
+        color: #fff;
     }
 
     button {
@@ -68,6 +70,7 @@ export const GlobalStyle = createGlobalStyle`
                             background: none;
                             color: inherit;
                             border: none;
+                            margin-bottom: 1rem;
                         }
 
                 }
@@ -83,11 +86,23 @@ export const GlobalStyle = createGlobalStyle`
             margin-top: 3rem;
             width: 100%;
             transition: background 0.2s;
+            font-family: "Open Sans", sans-serif;
 
             &:hover {
                 background: #ffd70f;
             }
         }
+    }
+
+    .get-started-modal {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: #6A40E4;
+        padding: 1rem;
+        color: #fff;
     }
 
     .react-modal-close {
