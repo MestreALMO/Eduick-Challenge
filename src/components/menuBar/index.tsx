@@ -11,6 +11,7 @@ import {
   LogIn,
   GetStartedModalButton,
   PasswordLabel,
+  BigBar,
 } from "./styles";
 import { MainTitles } from "../mainTitles";
 
@@ -63,12 +64,34 @@ export const MenuBar = () => {
   return (
     <>
       <Container>
-        <button type="button" onClick={openMenuBarModal}>
+        <button
+          type="button"
+          onClick={openMenuBarModal}
+          className="open-menu-bar-modal"
+        >
           <RiMenu2Fill />
         </button>
         <EduickImage>
           <Image src="/logo.png" width="140" height="23" />
         </EduickImage>
+
+        <BigBar>
+          <ul>
+            <li>
+              <button type="button">How it works</button>
+            </li>
+            <li>
+              <button type="button">About us</button>
+            </li>
+          </ul>
+          <button
+            type="button"
+            className="get-started-big-bar"
+            onClick={openGetStartedModal}
+          >
+            Get Started
+          </button>
+        </BigBar>
 
         {/* modal-menu */}
         <Modal
@@ -77,33 +100,35 @@ export const MenuBar = () => {
           overlayClassName="react-modal-overlay"
           className="menu-bar-modal"
         >
-          <button
-            type="button"
-            onClick={closeMenuBarModal}
-            className="react-modal-close"
-          >
-            <VscChromeClose />
-          </button>
-
-          <EduickImage>
-            <Image src="/logo.png" width="140" height="23" />
-          </EduickImage>
-          <div className="menuBarOptions">
-            <ul>
-              <li>
-                <button type="button">How it works</button>
-              </li>
-              <li>
-                <button type="button">About us</button>
-              </li>
-            </ul>
+          <div className="menu-bar-modal-div">
             <button
-              className="menuBarButton"
               type="button"
-              onClick={openGetStartedModal}
+              onClick={closeMenuBarModal}
+              className="react-modal-close"
             >
-              Get Started
+              <VscChromeClose />
             </button>
+
+            <EduickImage>
+              <Image src="/logo.png" width="140" height="23" />
+            </EduickImage>
+            <div className="menuBarOptions">
+              <ul>
+                <li>
+                  <button type="button">How it works</button>
+                </li>
+                <li>
+                  <button type="button">About us</button>
+                </li>
+              </ul>
+              <button
+                className="menuBarButton"
+                type="button"
+                onClick={openGetStartedModal}
+              >
+                Get Started
+              </button>
+            </div>
           </div>
         </Modal>
 
@@ -115,35 +140,39 @@ export const MenuBar = () => {
           overlayClassName="react-modal-overlay"
           className="get-started-modal"
         >
-          <button
-            type="button"
-            onClick={closeGetStartedModal}
-            className="react-modal-close"
-          >
-            <VscChromeClose />
-          </button>
+          <div className="get-started-modal-div">
+            <button
+              type="button"
+              onClick={closeGetStartedModal}
+              className="react-modal-close"
+            >
+              <VscChromeClose />
+            </button>
 
-          <MainTitles white={"Get Started "} yellow={"just login"} />
+            <MainTitles white={"Get Started "} yellow={"just login"} />
 
-          <LogIn>
-            <label htmlFor="login-username">
-              <p>Username</p>
-              <input type="text" id="login-username" />
-            </label>
-            <PasswordLabel htmlFor="login-password">
-              <p>Password</p>
-              <div className="PasswordInputPlusButton">
-                <input
-                  type={passwordVisibility === true ? "password" : "text"}
-                  id="login-password"
-                />
-                <button type="button" onClick={changePasswordVisibility}>
-                  {passwordVisibility === true ? <FiEye /> : <FiEyeOff />}
-                </button>
-              </div>
-            </PasswordLabel>
-            <GetStartedModalButton type="button">LOGIN</GetStartedModalButton>
-          </LogIn>
+            <LogIn>
+              <label htmlFor="login-username">
+                <p>Username</p>
+                <input type="text" id="login-username" />
+              </label>
+              <PasswordLabel htmlFor="login-password">
+                <p>Password</p>
+                <div className="PasswordInputPlusButton">
+                  <input
+                    type={passwordVisibility === true ? "password" : "text"}
+                    id="login-password"
+                  />
+                  <button type="button" onClick={changePasswordVisibility}>
+                    {passwordVisibility === true ? <FiEye /> : <FiEyeOff />}
+                  </button>
+                </div>
+              </PasswordLabel>
+              <GetStartedModalButton href="/dashboard">
+                LOGIN
+              </GetStartedModalButton>
+            </LogIn>
+          </div>
         </Modal>
       </Container>
     </>

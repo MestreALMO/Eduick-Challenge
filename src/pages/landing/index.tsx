@@ -8,12 +8,18 @@ import {
   TextInput,
   SearchButton,
   LandingImage,
+  ContainerWidth,
+  OccupancyPlusButton,
+  ContentAndForm,
+  MenuAndEverything,
+  InTheRightShape,
 } from "./styles";
 import { MenuBar } from "../../components/menuBar";
 import { LandingShape } from "../../components/landingShape";
+import { YellowShape } from "../../components/yellowShape";
 import { MainTitles } from "../../components/mainTitles";
 
-export const Landing = () => {
+const Landing = () => {
   const [occupancyChecked, setOccupancyChecked] = useState(0);
 
   function changeOccupancyChecked(val: number) {
@@ -24,55 +30,84 @@ export const Landing = () => {
     <>
       <Container>
         <SearchForm>
-          <MenuBar />
-          <div id="main-titles">
-            <MainTitles white={"Find your "} yellow={"best teacher"} />
-          </div>
+          <ContainerWidth>
+            <MenuAndEverything>
+              <div className="menu-bar-div">
+                <MenuBar />
+              </div>
+              <ContentAndForm>
+                <div id="main-titles">
+                  <MainTitles white={"Find your "} yellow={"best teacher"} />
 
-          <TextInput
-            type="text"
-            placeholder="Type here what you are looking for"
-          />
-          <Occupancy>
-            <label
-              htmlFor="radioTeacher"
-              className={occupancyChecked === 0 ? "OccupancyChecked" : ""}
-            >
-              <input
-                type="radio"
-                name="occupancy"
-                id="radioTeacher"
-                onChange={() => {
-                  changeOccupancyChecked(0);
-                }}
-              />
-              <span>I'm a teacher</span>
-            </label>
-            <label
-              htmlFor="radioStudant"
-              className={occupancyChecked === 1 ? "OccupancyChecked" : ""}
-            >
-              <input
-                type="radio"
-                name="occupancy"
-                id="radioStudant"
-                onChange={() => {
-                  changeOccupancyChecked(1);
-                }}
-              />
-              <span>I'm a studant</span>
-            </label>
-          </Occupancy>
-          <SearchButton type="submit">SEARCH</SearchButton>
+                  <p>
+                    Whether you are a student trying to find your ideal private
+                    language teachers/tutors or a teacher trying to find great
+                    students for your customised private lessons!
+                  </p>
+                </div>
 
-          <LandingImage>
-            <div>
-              <LandingShape />
-              <Image src="/landing.png" alt="" width="209" height="416" />
-            </div>
-          </LandingImage>
+                <TextInput
+                  type="text"
+                  placeholder="Type here what you are looking for"
+                />
+                <OccupancyPlusButton>
+                  <Occupancy>
+                    <label
+                      htmlFor="radioTeacher"
+                      className={
+                        occupancyChecked === 0 ? "OccupancyChecked" : ""
+                      }
+                    >
+                      <input
+                        type="radio"
+                        name="occupancy"
+                        id="radioTeacher"
+                        checked={occupancyChecked === 0}
+                        onChange={() => {
+                          changeOccupancyChecked(0);
+                        }}
+                      />
+                      <span>I'm a teacher</span>
+                    </label>
+                    <label
+                      htmlFor="radioStudant"
+                      className={
+                        occupancyChecked === 1 ? "OccupancyChecked" : ""
+                      }
+                    >
+                      <input
+                        type="radio"
+                        name="occupancy"
+                        checked={occupancyChecked === 1}
+                        id="radioStudant"
+                        onChange={() => {
+                          changeOccupancyChecked(1);
+                        }}
+                      />
+                      <span>I'm a studant</span>
+                    </label>
+                  </Occupancy>
+                  <SearchButton type="submit">SEARCH</SearchButton>
+                </OccupancyPlusButton>
+              </ContentAndForm>
+
+              <LandingImage>
+                <div className="landingImageDiv">
+                  <LandingShape />
+                  <Image src="/landing.png" alt="" width="209" height="416" />
+                  <YellowShape />
+                </div>
+              </LandingImage>
+
+              <InTheRightShape>
+                <LandingShape />
+              </InTheRightShape>
+            </MenuAndEverything>
+          </ContainerWidth>
         </SearchForm>
       </Container>
     </>
   );
 };
+
+export default Landing;

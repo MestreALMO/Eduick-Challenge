@@ -55,8 +55,27 @@ export const GlobalStyle = createGlobalStyle`
         background: #2A1A6B;
         padding: 1rem;
         color: #fff;
+        display: flex;
+        justify-content: center;
+
+        @media screen and (min-width: 900px) {
+            top: unset;
+            bottom: unset;
+            right: unset;
+            left: unset;
+            min-width: 30rem;
+            max-width: 30rem;
+            padding: 4rem;
+        }
+
+        .menu-bar-modal-div {
+            min-width: 300px;
+            max-width: 300px;
+            position: relative;
+        }
 
         .menuBarOptions {
+            width: 100%;
 
             ul {
                 margin-top: 8rem;
@@ -87,6 +106,7 @@ export const GlobalStyle = createGlobalStyle`
             width: 100%;
             transition: background 0.2s;
             font-family: "Open Sans", sans-serif;
+            width: 100%;
 
             &:hover {
                 background: #ffd70f;
@@ -95,6 +115,8 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     .get-started-modal {
+        display: flex;
+        justify-content: center;
         position: fixed;
         top: 0;
         bottom: 0;
@@ -103,22 +125,52 @@ export const GlobalStyle = createGlobalStyle`
         background: #6A40E4;
         padding: 1rem;
         color: #fff;
+
+        @media screen and (min-width: 900px) {
+            top: unset;
+            bottom: unset;
+            right: unset;
+            left: unset;
+            min-width: 30rem;
+            max-width: 30rem;
+            padding: 4rem;
+        }
+
+        .get-started-modal-div {
+            max-width: 300px;
+            min-width: 300px;
+            position: relative;
+        }
     }
 
     .react-modal-close {
         color: #fff;
         font-size: 1.8rem;
         border: none;
-        position: absolute;
         padding: 0;
-        width: auto;
-        top: 0.7rem;
-        right: 1rem;
+        position: absolute;
+        top: 0rem;
+        right: -0.4rem;
         background: inherit;
         transition: color 0.2s;
 
         &:hover {
             color: red;
+        }
+
+        @media screen and (min-width: 900px) {
+            display: flex;
+            top: -5rem;
+            right: -6.8rem;
+            background: #000;
+            padding: 0.2rem;
+            border-radius: 50%;
+            opacity 0.6;
+            transition: color 0.2s opacity 0.2s;
+
+            &:hover {
+                opacity 1;
+            }
         }
     }
 `;

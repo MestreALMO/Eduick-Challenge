@@ -5,6 +5,7 @@ export const Container = styled.div`
   align-items: center;
   background: inherit;
   color: inherit;
+  min-width: 100%;
 
   button {
     background: inherit;
@@ -20,11 +21,64 @@ export const Container = styled.div`
       }
     }
   }
+
+  @media screen and (min-width: 900px) {
+    .open-menu-bar-modal {
+      display: none;
+    }
+  }
 `;
 
 export const EduickImage = styled.div`
   width: 6rem;
   font-size: 1.2rem;
+`;
+
+export const BigBar = styled.div`
+  display: none;
+
+  @media screen and (min-width: 900px) {
+    display: flex;
+    margin-left: 4rem;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 61rem;
+
+    ul {
+      display: flex;
+
+      li {
+        margin: 0.5rem;
+
+        button {
+          padding: 1rem;
+          font-family: "Open Sans", sans-serif;
+          border-radius: 10px;
+          min-width: 6rem;
+
+          &:hover {
+            background: #7f5cf1;
+          }
+        }
+      }
+    }
+
+    .get-started-big-bar {
+      font-family: "Open Sans", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #ffd74f;
+      border-radius: 10px;
+      padding: 1rem 2rem;
+      color: #744ff4;
+      transition: background 0.2s;
+
+      &:hover {
+        background: #ffd70f;
+      }
+    }
+  }
 `;
 
 export const LogIn = styled.form`
@@ -78,7 +132,7 @@ export const PasswordLabel = styled.label`
   }
 `;
 
-export const GetStartedModalButton = styled.button`
+export const GetStartedModalButton = styled.a`
   margin: 0.6rem 0 0;
   width: 100%;
   padding: 0.8rem;
@@ -93,5 +147,9 @@ export const GetStartedModalButton = styled.button`
 
   &:hover {
     background: #ffd70f;
+  }
+
+  @media screen and (min-width: 900px) {
+    width: 100%;
   }
 `;
