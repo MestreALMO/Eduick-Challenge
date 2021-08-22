@@ -4,7 +4,7 @@
   <h3 align="center">Eduick challenge</h3>
 
   <p align="center">
-    The challenge from Edusynch company
+    The Edusynch challenge
     <br />
     <br />
     <img src="_README.md/app.gif" alt="gif">
