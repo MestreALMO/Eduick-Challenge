@@ -99,7 +99,7 @@ export const ContentLoggedDiv = styled.div`
   @media screen and (min-width: 900px) {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1190px;
+    max-width: 800px;
   }
 `;
 
