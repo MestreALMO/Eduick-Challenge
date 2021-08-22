@@ -1,10 +1,10 @@
 <br />
 <p align="center">
 
-  <h3 align="center">Eduick challenge</h3>
+  <h3 align="center">Edusynch challenge</h3>
 
   <p align="center">
-    The Edusynch challenge
+    A Next.JS project with endless scroll and API made in Express
     <br />
     <br />
     <img src="_README.md/app.gif" alt="gif">
