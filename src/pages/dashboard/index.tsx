@@ -8,7 +8,7 @@ type Post = {
 };
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:3100/");
+  const res = await fetch("http://localhost:3100/?start=0&limit=6");
   const posts: Post[] = await res.json();
 
   return {
@@ -28,6 +28,7 @@ import {
   ContentLoggedInCenter,
   MenuBarLoggedFixed,
   ContentLoggedDiv,
+  ContentLoggedDivCenter,
   WelcomeUserText,
   WelcomeUserImage,
   WelcomeUserImageDivBackground,
@@ -40,23 +41,18 @@ const Dashboard = ({
   const [projects, setProjects] = useState(posts);
   const [hasMore, setHasMore] = useState(true);
 
-  // const getMoreProject = async () => {
-  //   const res = await fetch(
-  //     `http://localhost:3100/todos?_start=${posts.length}&_limit=10`
-  //   );
-  //   const newProjects = await res.json();
-  //   setProjects((projects) => [...projects, ...newProjects]);
-  // };
+  const getMoreProject = async () => {
+    const res = await fetch(
+      `http://localhost:3100/?start=${projects.length}&limit=${
+        projects.length + 6
+      }`
+    );
+    const newProjects = await res.json();
+    setProjects((project) => [...project, ...newProjects]);
+  };
 
   return (
     <>
-      {/* <InfiniteScroll
-        dataLength={projects.length}
-        next={getMoreProject}
-        hasMore={hasMore}
-        loader={<h3>Loading...</h3>}
-        endMessage={<h4>Nothing more to show</h4>}
-      > */}
       <Container>
         <MenuBarLogged />
         <MenuBarLoggedFixed>test</MenuBarLoggedFixed>
@@ -89,13 +85,21 @@ const Dashboard = ({
               </WelcomeUserImage>
             </WelcomeUser>
 
-            <ContentLoggedDiv>
-              {/* {console.log(projects)} */}
-              {/* {projects[0].project} */}
-              {projects.map((project) => (
-                <ContentLogged {...project} />
-              ))}
-            </ContentLoggedDiv>
+            <InfiniteScroll
+              dataLength={projects.length}
+              next={getMoreProject}
+              hasMore={hasMore}
+              loader={<h3>&nbsp;</h3>}
+              endMessage={<h4>&nbsp;</h4>}
+            >
+              <ContentLoggedDivCenter>
+                <ContentLoggedDiv>
+                  {projects.map((project) => (
+                    <ContentLogged {...project} />
+                  ))}
+                </ContentLoggedDiv>
+              </ContentLoggedDivCenter>
+            </InfiniteScroll>
           </ContentLoggedInCenter>
         </DashboardContent>
 
@@ -109,7 +113,6 @@ const Dashboard = ({
           </p>
         </BottomBar>
       </Container>
-      {/* </InfiniteScroll> */}
     </>
   );
 };

@@ -22,7 +22,7 @@ export const WelcomeUser = styled.div`
   max-width: 380px;
 
   @media screen and (min-width: 900px) {
-    min-width: 768px;
+    min-width: 776px;
     width: 100%;
     padding: 2rem;
     display: flex;
@@ -30,7 +30,7 @@ export const WelcomeUser = styled.div`
   }
 
   @media screen and (min-width: 1220px) {
-    max-width: 1152px;
+    max-width: 1172px;
   }
 
   h1 {
@@ -96,6 +96,14 @@ export const ContentLoggedInCenter = styled.div`
 `;
 
 export const ContentLoggedDiv = styled.div`
+  @media screen and (min-width: 900px) {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1190px;
+  }
+`;
+
+export const ContentLoggedDivCenter = styled.div`
   @media screen and (min-width: 900px) {
     display: flex;
     justify-content: center;

@@ -35,8 +35,8 @@ export const ContentLogged = (props: interfaceProjects) => {
               "/blob/main/_README.md/img01.png?raw=true"
             }
             alt={props.project}
-            width="336"
-            height="163"
+            width="1919"
+            height="1079"
           />
         </ImageContent>
         <StarsAndLessonsNumber>
