@@ -8,7 +8,7 @@ type Post = {
 };
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:3100/?start=0&limit=6");
+  const res = await fetch("http://localhost:3100/?start=0&limit=12");
   const posts: Post[] = await res.json();
 
   return {
