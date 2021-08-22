@@ -47,7 +47,7 @@ export const ContainerWidth = styled.div`
   }
 `;
 
-export const MenuAndEverything = styled.div`
+export const MenuScreenSizes = styled.div`
   .menu-bar-div {
     grid-area: header;
     width: 100%;

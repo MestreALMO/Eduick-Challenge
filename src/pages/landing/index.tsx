@@ -11,7 +11,7 @@ import {
   ContainerWidth,
   OccupancyPlusButton,
   ContentAndForm,
-  MenuAndEverything,
+  MenuScreenSizes,
   InTheRightShape,
 } from "./styles";
 import { MenuBar } from "../../components/menuBar";
@@ -31,7 +31,7 @@ const Landing = () => {
       <Container>
         <SearchForm>
           <ContainerWidth>
-            <MenuAndEverything>
+            <MenuScreenSizes>
               <div className="menu-bar-div">
                 <MenuBar />
               </div>
@@ -102,7 +102,7 @@ const Landing = () => {
               <InTheRightShape>
                 <LandingShape />
               </InTheRightShape>
-            </MenuAndEverything>
+            </MenuScreenSizes>
           </ContainerWidth>
         </SearchForm>
       </Container>
