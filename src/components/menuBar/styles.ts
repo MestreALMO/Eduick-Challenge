@@ -68,14 +68,14 @@ export const BigBar = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #ffd74f;
+      background: #ffd70f;
       border-radius: 10px;
       padding: 1rem 2rem;
       color: #744ff4;
-      transition: background 0.2s;
+      transition: filter 0.2s;
 
       &:hover {
-        background: #ffd70f;
+        filter: brightness(0.9);
       }
     }
   }
@@ -121,6 +121,7 @@ export const PasswordLabel = styled.label`
     position: relative;
 
     input {
+      padding-right: 2.4rem;
     }
     button {
       position: absolute;
@@ -139,14 +140,14 @@ export const GetStartedModalButton = styled.a`
   color: #744ff4;
   font-weight: 700;
   font-family: "Open Sans", sans-serif;
-  background: #ffd74f;
+  background: #ffd70f;
   border-radius: 4px;
   border: none;
   margin-bottom: 1rem;
-  transition: background 0.2s;
+  transition: filter 0.2s;
 
   &:hover {
-    background: #ffd70f;
+    filter: brightness(0.9);
   }
 
   @media screen and (min-width: 900px) {

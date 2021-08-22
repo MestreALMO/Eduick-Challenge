@@ -136,14 +136,14 @@ export const SearchButton = styled.button`
   color: #744ff4;
   font-weight: 700;
   font-family: "Open Sans", sans-serif;
-  background: #ffd74f;
+  background: #ffd70f;
   border-radius: 4px;
   border: none;
   margin-bottom: 1rem;
-  transition: background 0.2s;
+  transition: filter 0.2s;
 
   &:hover {
-    background: #ffd70f;
+    filter: brightness(0.9);
   }
 
   @media screen and (min-width: 900px) {
