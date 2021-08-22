@@ -53,5 +53,5 @@ With that the app will be running!
 ## Contact
 My Name: André Lusegardis Miranda de Oliveira
   * lusegardis@gmail.com
-  * [LinkedIn](https://www.linkedin.com/in/andr%C3%A9-lusegardis/)
+  * [LinkedIn](https://www.linkedin.com/in/andr%C3%A9-lusegardis/detail/recent-activity/shares/)
   * [GitHub](https://github.com/MestreALMO)
