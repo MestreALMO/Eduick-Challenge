@@ -1,34 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<br />
+<p align="center">
 
-## Getting Started
+  <h3 align="center">Eduick challenge</h3>
 
-First, run the development server:
+  <p align="center">
+    The challenge from Edusynch company
+    <br />
+    <br />
+    <img src="_README.md/app.gif" alt="gif">
+  </p>
+</p>
 
-```bash
-npm run dev
-# or
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#about">About</a></li>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#running">Running</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+
+## About
+This was a challenge that the Eduick company invited me to do, so I could get a job there.
+<br />
+So I was told that I had 20 days to do it, thought I didn't see the e-mail in the same day, I still did the job in the 20 days from the day they sent me the e-mail.
+<br />
+The challenge itself can be found [here](https://github.com/edusynch/frontend-challenge).
+<br />
+I also made a video about it:
+
+## Prerequisites
+To run in Windows 10 you need to install some tools, like: NodeJS, Chocolatey and more. [here](https://github.com/MestreALMO/React-Requires-To-Run-Windows-) is how to install all of it.
+<br/>
+
+
+## Running
+Access the folder ```_API-espress``` inside the project with a terminal, if it is the first time running the code don't forget to run ```yarn```, then the following code:
+```
 yarn dev
 ```
+Now the API is running!
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Now access the root of the project with a terminal, don't forget to run ```yarn``` if it is the first time running the project, then run the code:
+```
+yarn dev
+```
+With that the app will be running! 
+<br />You can access it with ```http://localhost:3000/```
+<br />Also you can see the API running at ```http://localhost:3100/```
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.tsx`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contact
+My Name: André Lusegardis Miranda de Oliveira
+  * lusegardis@gmail.com
+  * [LinkedIn](https://www.linkedin.com/in/andr%C3%A9-lusegardis/)
+  * [GitHub](https://github.com/MestreALMO)
