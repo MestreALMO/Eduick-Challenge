@@ -28,7 +28,7 @@ So I was told that I had 20 days to do it, thought I didn't see the e-mail in th
 <br />
 The challenge itself can be found [here](https://github.com/edusynch/frontend-challenge).
 <br />
-I also made a video about it:
+I also made a video about it that can be seen [right here](https://youtu.be/xmDRtEEtXWo).
 
 ## Prerequisites
 To run in Windows 10 you need to install some tools, like: NodeJS, Chocolatey and more. [here](https://github.com/MestreALMO/React-Requires-To-Run-Windows-) is how to install all of it.
