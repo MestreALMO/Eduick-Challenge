@@ -1,10 +1,10 @@
 <br />
 <p align="center">
 
-  <h3 align="center">Eduick challenge</h3>
+  <h3 align="center">Edusynch challenge</h3>
 
   <p align="center">
-    The challenge from Edusynch company
+    A Next.JS project with endless scroll and API made in Express
     <br />
     <br />
     <img src="_README.md/app.gif" alt="gif">
@@ -28,7 +28,7 @@ So I was told that I had 20 days to do it, thought I didn't see the e-mail in th
 <br />
 The challenge itself can be found [here](https://github.com/edusynch/frontend-challenge).
 <br />
-I also made a video about it that can be seen [right here](https://youtu.be/xmDRtEEtXWo).
+I also made a video about it, that can be seen [right here](https://youtu.be/xmDRtEEtXWo).
 
 ## Prerequisites
 To run in Windows 10 you need to install some tools, like: NodeJS, Chocolatey and more. [here](https://github.com/MestreALMO/React-Requires-To-Run-Windows-) is how to install all of it.
@@ -53,5 +53,5 @@ With that the app will be running!
 ## Contact
 My Name: André Lusegardis Miranda de Oliveira
   * lusegardis@gmail.com
-  * [LinkedIn](https://www.linkedin.com/in/andr%C3%A9-lusegardis/)
+  * [LinkedIn](https://www.linkedin.com/in/andr%C3%A9-lusegardis/detail/recent-activity/shares/)
   * [GitHub](https://github.com/MestreALMO)
