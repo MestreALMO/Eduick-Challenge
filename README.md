@@ -36,7 +36,7 @@ To run in Windows 10 you need to install some tools, like: NodeJS, Chocolatey an
 
 
 ## Running
-Access the folder ```_API-espress``` inside the project with a terminal, if it is the first time running the code don't forget to run ```yarn```, then the following code:
+Access the folder ```_API-express``` inside the project with a terminal, if it is the first time running the code don't forget to run ```yarn```, then the following code:
 ```
 yarn dev
 ```
